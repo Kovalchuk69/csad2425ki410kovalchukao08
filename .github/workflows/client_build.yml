@@ -1,0 +1,43 @@
+# This is a basic workflow to help you get started with Actions
+
+name: C++ Client Build with MSBuild
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "develop" branch
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.2
+
+      - name: Build UART_Client_Lab_2 solution
+        run: msbuild /p:Configuration=Release /p:Platform=x64 source/windows/Lab2_Client_Uart/Lab2_Client_Uart.sln
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+            name: build-output
+            path: |
+                source/windows/Lab2_Client_Uart/**/Release/*.exe
+                source/windows/Lab2_Client_Uart/**/Release/*.dll
+                source/windows/Lab2_Client_Uart/**/Release/*.lib
+

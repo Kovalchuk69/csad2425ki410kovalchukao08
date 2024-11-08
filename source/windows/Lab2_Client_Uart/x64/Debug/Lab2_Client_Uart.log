@@ -1,0 +1,3 @@
+﻿  Lab2_Client_Uart.cpp
+D:\Downloads\github\csad2425ki410kovalchukao08\source\windows\Lab2_Client_Uart\Lab2_Client_Uart.cpp(91,70): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+  Lab2_Client_Uart.vcxproj -> D:\Downloads\github\csad2425ki410kovalchukao08\source\windows\Lab2_Client_Uart\x64\Debug\Lab2_Client_Uart.exe
