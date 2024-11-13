@@ -1,0 +1,11 @@
+{
+    "gameInfo": "Player vs Computer  Player  choice: Rock ;  Computer  choice: Rock ",
+    "gameState": [
+        1,
+        1,
+        1,
+        0,
+        1
+    ],
+    "resultText": "Draw"
+}
