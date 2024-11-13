@@ -1,0 +1,35 @@
+\doxysection{detail\+::actual\+\_\+object\+\_\+comparator\texorpdfstring{$<$}{<} Basic\+Json\+Type \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structdetail_1_1actual__object__comparator}{}\label{structdetail_1_1actual__object__comparator}\index{detail::actual\_object\_comparator$<$ BasicJsonType $>$@{detail::actual\_object\_comparator$<$ BasicJsonType $>$}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structdetail_1_1actual__object__comparator_a2c0a47eeb22aad42894885967d6ccba8}\label{structdetail_1_1actual__object__comparator_a2c0a47eeb22aad42894885967d6ccba8} 
+using {\bfseries object\+\_\+t} = typename Basic\+Json\+Type\+::object\+\_\+t
+\item 
+\Hypertarget{structdetail_1_1actual__object__comparator_a42de7d4d2f7fe71097315e5429c8b71f}\label{structdetail_1_1actual__object__comparator_a42de7d4d2f7fe71097315e5429c8b71f} 
+using {\bfseries object\+\_\+comparator\+\_\+t} = typename Basic\+Json\+Type\+::default\+\_\+object\+\_\+comparator\+\_\+t
+\item 
+using \mbox{\hyperlink{structdetail_1_1actual__object__comparator_a0a93664d899c794bba849d00def01424}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{structdetail_1_1actual__object__comparator_a0a93664d899c794bba849d00def01424}\index{detail::actual\_object\_comparator$<$ BasicJsonType $>$@{detail::actual\_object\_comparator$<$ BasicJsonType $>$}!type@{type}}
+\index{type@{type}!detail::actual\_object\_comparator$<$ BasicJsonType $>$@{detail::actual\_object\_comparator$<$ BasicJsonType $>$}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{structdetail_1_1actual__object__comparator_a0a93664d899c794bba849d00def01424} 
+template$<$typename Basic\+Json\+Type $>$ \\
+typedef typename std\+::conditional$<$ \mbox{\hyperlink{structdetail_1_1has__key__compare}{has\+\_\+key\+\_\+compare}}$<$ object\+\_\+t $>$\mbox{\hyperlink{namespacedetail_a47b1bb0bbd3596589ed9187059c312efa2063c1608d6e0baf80249c42e2be5804}{\+::value}}, typename object\+\_\+t\+::key\+\_\+compare, object\+\_\+comparator\+\_\+t $>$\+::type \mbox{\hyperlink{structdetail_1_1actual__object__comparator}{detail\+::actual\+\_\+object\+\_\+comparator}}$<$ Basic\+Json\+Type $>$\+::type}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \textcolor{keyword}{typename}\ std::conditional\ <\ has\_key\_compare<object\_t>::value,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ object\_t::key\_compare,\ object\_comparator\_t>::type}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Andrew/\+Desktop/lab3\+\_\+apks/\+Rock\+\_\+paper\+\_\+scissors\+\_\+client/json.\+hpp\item 
+C\+:/\+Users/\+Andrew/\+Desktop/lab3\+\_\+apks/\+Rock\+\_\+paper\+\_\+scissors\+\_\+client/nlohmann/json.\+hpp\end{DoxyCompactItemize}

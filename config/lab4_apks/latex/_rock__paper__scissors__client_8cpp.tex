@@ -1,0 +1,131 @@
+\doxysection{C\+:/\+Users/\+Andrew/\+Desktop/lab3\+\_\+apks/\+Rock\+\_\+paper\+\_\+scissors\+\_\+client/\+Rock\+\_\+paper\+\_\+scissors\+\_\+client.cpp File Reference}
+\hypertarget{_rock__paper__scissors__client_8cpp}{}\label{_rock__paper__scissors__client_8cpp}\index{C:/Users/Andrew/Desktop/lab3\_apks/Rock\_paper\_scissors\_client/Rock\_paper\_scissors\_client.cpp@{C:/Users/Andrew/Desktop/lab3\_apks/Rock\_paper\_scissors\_client/Rock\_paper\_scissors\_client.cpp}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include "{}nlohmann/json.\+hpp"{}}\newline
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_rock__paper__scissors__client_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}\label{_rock__paper__scissors__client_8cpp_ab701e3ac61a85b337ec5c1abaad6742d} 
+using {\bfseries json} = nlohmann\+::json
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_rock__paper__scissors__client_8cpp_a568f4f251fdf694391d5f93eb05af382}{save\+Game\+State}} (const vector$<$ int $>$ \&game\+State, const string \&result\+Text, const string \&game\+Info, const string \&filename="{}game\+\_\+config.\+json"{})
+\begin{DoxyCompactList}\small\item\em Saves the current game state to a JSON file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_rock__paper__scissors__client_8cpp_ab571395bcde2088e552286694c37e3b4}{load\+Game\+State}} (vector$<$ int $>$ \&game\+State, string \&result\+Text, string \&game\+Info, const string \&filename="{}game\+\_\+config.\+json"{})
+\begin{DoxyCompactList}\small\item\em Loads the game state from a JSON file. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{_rock__paper__scissors__client_8cpp_a0b50b2858f78dcfc840ba4ba624d1218}{create\+JSON}} (const vector$<$ int $>$ \&array)
+\begin{DoxyCompactList}\small\item\em Creates a JSON string from an integer array. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_rock__paper__scissors__client_8cpp_aa11e12d2a9b1dc920b6d25ec992518dd}{parse\+JSON}} (const string \&\mbox{\hyperlink{classbasic__json}{json}}, vector$<$ int $>$ \&array, string \&result\+Text, string \&game\+Info)
+\begin{DoxyCompactList}\small\item\em Parses a JSON string to extract an integer array, result text, and game information. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_rock__paper__scissors__client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em The main function initializes serial communication with an Arduino, handles game modes, and processes game data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_rock__paper__scissors__client_8cpp_a0b50b2858f78dcfc840ba4ba624d1218}\index{Rock\_paper\_scissors\_client.cpp@{Rock\_paper\_scissors\_client.cpp}!createJSON@{createJSON}}
+\index{createJSON@{createJSON}!Rock\_paper\_scissors\_client.cpp@{Rock\_paper\_scissors\_client.cpp}}
+\doxysubsubsection{\texorpdfstring{createJSON()}{createJSON()}}
+{\footnotesize\ttfamily \label{_rock__paper__scissors__client_8cpp_a0b50b2858f78dcfc840ba4ba624d1218} 
+string create\+JSON (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{array}{}\end{DoxyParamCaption})}
+
+
+
+Creates a JSON string from an integer array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & The array of integers to be converted into JSON. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A JSON string representation of the integer array. 
+\end{DoxyReturn}
+\Hypertarget{_rock__paper__scissors__client_8cpp_ab571395bcde2088e552286694c37e3b4}\index{Rock\_paper\_scissors\_client.cpp@{Rock\_paper\_scissors\_client.cpp}!loadGameState@{loadGameState}}
+\index{loadGameState@{loadGameState}!Rock\_paper\_scissors\_client.cpp@{Rock\_paper\_scissors\_client.cpp}}
+\doxysubsubsection{\texorpdfstring{loadGameState()}{loadGameState()}}
+{\footnotesize\ttfamily \label{_rock__paper__scissors__client_8cpp_ab571395bcde2088e552286694c37e3b4} 
+bool load\+Game\+State (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{game\+State}{, }\item[{string \&}]{result\+Text}{, }\item[{string \&}]{game\+Info}{, }\item[{const string \&}]{filename}{ = {\ttfamily "{}game\+\_\+config.json"{}}}\end{DoxyParamCaption})}
+
+
+
+Loads the game state from a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+State} & Reference to a vector that will hold the loaded game state. \\
+\hline
+{\em result\+Text} & Reference to a string that will hold the loaded result text. \\
+\hline
+{\em game\+Info} & Reference to a string that will hold the loaded game information. \\
+\hline
+{\em filename} & The filename to load the game state from (default is "{}game\+\_\+config.\+json"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if loading was successful; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{_rock__paper__scissors__client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{Rock\_paper\_scissors\_client.cpp@{Rock\_paper\_scissors\_client.cpp}!main@{main}}
+\index{main@{main}!Rock\_paper\_scissors\_client.cpp@{Rock\_paper\_scissors\_client.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_rock__paper__scissors__client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+The main function initializes serial communication with an Arduino, handles game modes, and processes game data. 
+
+\begin{DoxyReturn}{Returns}
+Exit code of the program (0 for success, 1 for failure). 
+\end{DoxyReturn}
+\Hypertarget{_rock__paper__scissors__client_8cpp_aa11e12d2a9b1dc920b6d25ec992518dd}\index{Rock\_paper\_scissors\_client.cpp@{Rock\_paper\_scissors\_client.cpp}!parseJSON@{parseJSON}}
+\index{parseJSON@{parseJSON}!Rock\_paper\_scissors\_client.cpp@{Rock\_paper\_scissors\_client.cpp}}
+\doxysubsubsection{\texorpdfstring{parseJSON()}{parseJSON()}}
+{\footnotesize\ttfamily \label{_rock__paper__scissors__client_8cpp_aa11e12d2a9b1dc920b6d25ec992518dd} 
+bool parse\+JSON (\begin{DoxyParamCaption}\item[{const string \&}]{json}{, }\item[{vector$<$ int $>$ \&}]{array}{, }\item[{string \&}]{result\+Text}{, }\item[{string \&}]{game\+Info}{}\end{DoxyParamCaption})}
+
+
+
+Parses a JSON string to extract an integer array, result text, and game information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & The JSON string to parse. \\
+\hline
+{\em array} & Reference to a vector to store the extracted integer array. \\
+\hline
+{\em result\+Text} & Reference to a string to store the extracted result text. \\
+\hline
+{\em game\+Info} & Reference to a string to store the extracted game information. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsing was successful; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{_rock__paper__scissors__client_8cpp_a568f4f251fdf694391d5f93eb05af382}\index{Rock\_paper\_scissors\_client.cpp@{Rock\_paper\_scissors\_client.cpp}!saveGameState@{saveGameState}}
+\index{saveGameState@{saveGameState}!Rock\_paper\_scissors\_client.cpp@{Rock\_paper\_scissors\_client.cpp}}
+\doxysubsubsection{\texorpdfstring{saveGameState()}{saveGameState()}}
+{\footnotesize\ttfamily \label{_rock__paper__scissors__client_8cpp_a568f4f251fdf694391d5f93eb05af382} 
+void save\+Game\+State (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{game\+State}{, }\item[{const string \&}]{result\+Text}{, }\item[{const string \&}]{game\+Info}{, }\item[{const string \&}]{filename}{ = {\ttfamily "{}game\+\_\+config.json"{}}}\end{DoxyParamCaption})}
+
+
+
+Saves the current game state to a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+State} & The current game state represented as a vector of integers. \\
+\hline
+{\em result\+Text} & The result text of the game. \\
+\hline
+{\em game\+Info} & Additional information about the game. \\
+\hline
+{\em filename} & The filename for saving the game state as JSON (default is "{}game\+\_\+config.\+json"{}). \\
+\hline
+\end{DoxyParams}
