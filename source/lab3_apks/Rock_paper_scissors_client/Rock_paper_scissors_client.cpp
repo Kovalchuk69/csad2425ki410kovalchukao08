@@ -187,6 +187,7 @@ int main() {
     string resultText, gameInfo;
 
     while (true) {
+        vector<int> resultArray(5, 0);
         cout << "Gamemodes:\n1-Man vs AI\n2-Man vs Man\n3-AI vs AI\n4-Load previous game\n";
         cout << "Enter Game mode: ";
         int gameMode;
