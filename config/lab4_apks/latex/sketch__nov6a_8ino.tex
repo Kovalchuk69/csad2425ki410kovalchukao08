@@ -1,0 +1,62 @@
+\doxysection{C\+:/\+Users/\+Andrew/\+Desktop/lab3\+\_\+apks/arduino\+\_\+logic/sketch\+\_\+nov6a/sketch\+\_\+nov6a.ino File Reference}
+\hypertarget{sketch__nov6a_8ino}{}\label{sketch__nov6a_8ino}\index{C:/Users/Andrew/Desktop/lab3\_apks/arduino\_logic/sketch\_nov6a/sketch\_nov6a.ino@{C:/Users/Andrew/Desktop/lab3\_apks/arduino\_logic/sketch\_nov6a/sketch\_nov6a.ino}}
+{\ttfamily \#include $<$Arduino\+Json.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sketch__nov6a_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\item 
+void \mbox{\hyperlink{sketch__nov6a_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{sketch__nov6a_8ino_a89caf2804a544ddd551d9f021a458de5}\label{sketch__nov6a_8ino_a89caf2804a544ddd551d9f021a458de5} 
+const int {\bfseries target\+Score} = 3
+\begin{DoxyCompactList}\small\item\em The target score needed to win the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{sketch__nov6a_8ino_afe461d27b9c48d5921c00d521181f12f}\index{sketch\_nov6a.ino@{sketch\_nov6a.ino}!loop@{loop}}
+\index{loop@{loop}!sketch\_nov6a.ino@{sketch\_nov6a.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{sketch__nov6a_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Game mode labels for display in the game info.
+
+Labels for Player 1 based on the selected game mode.
+
+Labels for Player 2 based on the selected game mode.
+
+Choices available for the game\+: Rock, Paper, Scissors.
+
+JSON document to parse the input data.
+
+A static JSON document of size 200 is used for parsing the input data to prevent dynamic memory allocation on the microcontroller.
+
+\texorpdfstring{$<$}{<}Game mode selected by the player.
+
+\texorpdfstring{$<$}{<}Player 1\textquotesingle{}s choice.
+
+\texorpdfstring{$<$}{<}Player 2\textquotesingle{}s choice.
+
+\texorpdfstring{$<$}{<}Current win count for Player 1.
+
+\texorpdfstring{$<$}{<}Current win count for Player 2.
+
+\texorpdfstring{$<$}{<}Text describing the outcome of the round.
+
+\texorpdfstring{$<$}{<}Additional information about the current game state.
+
+JSON document to store the response data.
+
+This document is used to create the JSON response, including the updated game state array, the result text, and additional game information.\Hypertarget{sketch__nov6a_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{sketch\_nov6a.ino@{sketch\_nov6a.ino}!setup@{setup}}
+\index{setup@{setup}!sketch\_nov6a.ino@{sketch\_nov6a.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{sketch__nov6a_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Initializes the Serial communication and the random number generator.
+
+Sets the baud rate to 9600 for Serial communication and seeds the random number generator using an analog read on pin 0 to ensure randomness.
