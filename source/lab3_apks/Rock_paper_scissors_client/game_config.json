@@ -1,11 +1,11 @@
 {
-    "gameInfo": "Player vs Computer  Player  choice: Rock ;  Computer  choice: Rock ",
+    "gameInfo": "Computer vs Computer  Computer1  choice: Rock ;   Computer2  choice:  Paper ",
     "gameState": [
+        3,
         1,
+        2,
         1,
-        1,
-        0,
-        1
+        3
     ],
-    "resultText": "Draw"
+    "resultText": " Computer2  wins the game"
 }
