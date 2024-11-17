@@ -20,7 +20,7 @@ jobs:
 
       # Setup Visual Studio environment
       - name: Set up Visual Studio
-        uses: microsoft/setup-msbuild@v1
+        uses: microsoft/setup-msbuild@v2
 
       # Restore dependencies (if applicable, e.g., with vcpkg or NuGet)
       - name: Restore dependencies
