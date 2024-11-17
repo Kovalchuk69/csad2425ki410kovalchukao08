@@ -30,9 +30,9 @@ jobs:
       # Build the project
       - name: Build solution
         run: |
-          msbuild /p:Configuration=Release /p:Platform=x64 source/MyProjectTests/MyProjectTests.sln
+          msbuild /p:Configuration=Debug /p:Platform=x64 source/MyProjectTests/MyProjectTests.sln
 
       # Run tests
       - name: Run Google Tests
         run: |
-          .\source\MyProjectTests\x64\Release\MyProjectTests.exe
+          .\source\MyProjectTests\x64\Debug\MyProjectTests.exe
