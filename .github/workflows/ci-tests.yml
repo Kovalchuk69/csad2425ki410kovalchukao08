@@ -1,0 +1,38 @@
+name: Run Automated Tests
+
+on:
+  push:
+    branches:
+      - develop
+      - feature/develop/task5
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  run-tests:
+    runs-on: windows-latest
+
+    steps:
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Setup Visual Studio environment
+      - name: Set up Visual Studio
+        uses: microsoft/setup-msbuild@v2
+
+      # Restore dependencies (if applicable, e.g., with vcpkg or NuGet)
+      - name: Restore dependencies
+        run: |
+          nuget restore source/MyProjectTests/MyProjectTests.sln
+
+      # Build the project
+      - name: Build solution
+        run: |
+          msbuild /p:Configuration=Debug /p:Platform=x64 source/MyProjectTests/MyProjectTests.sln
+
+      # Run tests
+      - name: Run Google Tests
+        run: |
+          .\source\MyProjectTests\x64\Debug\MyProjectTests.exe
